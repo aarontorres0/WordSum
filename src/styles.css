@@ -1,0 +1,71 @@
+/* styles.css */
+:root {
+  --default-button-color: #fff;
+  --copy-button-background: #3d85c6;
+  --clear-button-background: #d9534f;
+  --copy-clear-button-background: #5cb85c;
+  --hover-button-background: #f2f2f2;
+}
+
+.word-counter textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+.word-counter p {
+  margin-top: 10px;
+}
+
+.word-counter .button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Customize button styles */
+.word-counter button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.word-counter button.copy-button {
+  background-color: var(--copy-button-background);
+  color: var(--default-button-color);
+}
+
+.word-counter button.copy-button:hover {
+  background-color: var(--hover-button-background);
+  color: var(--copy-button-background);
+}
+
+.word-counter button.clear-button {
+  background-color: var(--clear-button-background);
+  color: var(--default-button-color);
+}
+
+.word-counter button.clear-button:hover {
+  background-color: var(--hover-button-background);
+  color: var(--clear-button-background);
+}
+
+.word-counter button.copy-clear-button {
+  background-color: var(--copy-clear-button-background);
+  color: var(--default-button-color);
+}
+
+.word-counter button.copy-clear-button:hover {
+  background-color: var(--hover-button-background);
+  color: var(--copy-clear-button-background);
+}

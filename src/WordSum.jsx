@@ -1,14 +1,26 @@
 import "./styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const WordCounter = () => {
-  const [inputText, setInputText] = useState("");
-
-  const wordCount = inputText
+const calculateWordCount = (text) =>
+  text
     .trim()
     .split(/\s+/)
     .filter((word) => word.match(/[a-zA-Z]/)).length;
-  const charCount = inputText.length;
+
+const calculateCharCount = (text) => text.length;
+
+const WordSum = () => {
+  const [inputText, setInputText] = useState("");
+
+  useEffect(() => {
+    const savedText = localStorage.getItem("savedText");
+    if (savedText) {
+      setInputText(savedText);
+    }
+  }, []);
+
+  const wordCount = calculateWordCount(inputText);
+  const charCount = calculateCharCount(inputText);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(inputText);
@@ -16,16 +28,23 @@ const WordCounter = () => {
 
   const handleClear = () => {
     setInputText("");
+    localStorage.removeItem("savedText");
+  };
+
+  const handleInputChange = (event) => {
+    const newText = event.target.value;
+    setInputText(newText);
+    localStorage.setItem("savedText", newText);
   };
 
   return (
-    <div className="word-counter">
+    <div className="word-sum">
       <p>
         Word count: {wordCount} | Character count: {charCount}
       </p>
       <textarea
         value={inputText}
-        onChange={(e) => setInputText(e.target.value)}
+        onChange={handleInputChange}
         rows="25"
         cols="100"
       />
@@ -51,4 +70,4 @@ const WordCounter = () => {
   );
 };
 
-export default WordCounter;
+export default WordSum;

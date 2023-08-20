@@ -1,9 +1,8 @@
 import "./styles.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const WordCounter = () => {
   const [inputText, setInputText] = useState("");
-  const [copiedText, setCopiedText] = useState("");
 
   const wordCount = inputText
     .trim()
@@ -12,13 +11,11 @@ const WordCounter = () => {
   const charCount = inputText.length;
 
   const handleCopy = () => {
-    setCopiedText(inputText);
     navigator.clipboard.writeText(inputText);
   };
 
   const handleClear = () => {
     setInputText("");
-    setCopiedText("");
   };
 
   return (

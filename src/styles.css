@@ -1,6 +1,6 @@
 /* styles.css */
 :root {
-  --default-button-color: #fff;
+  --default-white: #fff;
   --copy-button-background: #3d85c6;
   --clear-button-background: #d9534f;
   --copy-clear-button-background: #5cb85c;
@@ -8,7 +8,6 @@
 }
 
 .word-sum textarea {
-  width: 100%;
   min-height: 150px;
   padding: 10px;
   border: 1px solid #ddd;
@@ -42,7 +41,7 @@
 
 .word-sum button.copy-button {
   background-color: var(--copy-button-background);
-  color: var(--default-button-color);
+  color: var(--default-white);
 }
 
 .word-sum button.copy-button:hover {
@@ -52,7 +51,7 @@
 
 .word-sum button.clear-button {
   background-color: var(--clear-button-background);
-  color: var(--default-button-color);
+  color: var(--default-white);
 }
 
 .word-sum button.clear-button:hover {
@@ -62,7 +61,7 @@
 
 .word-sum button.copy-clear-button {
   background-color: var(--copy-clear-button-background);
-  color: var(--default-button-color);
+  color: var(--default-white);
 }
 
 .word-sum button.copy-clear-button:hover {

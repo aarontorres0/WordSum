@@ -1,9 +1,9 @@
 /* styles.css */
 :root {
   --default-white: #fff;
-  --copy-button-background: #3d85c6;
-  --clear-button-background: #d9534f;
-  --copy-clear-button-background: #5cb85c;
+  --copy-action: #3d85c6;
+  --clear-action: #d9534f;
+  --copy-clear-action: #5cb85c;
   --hover-button-background: #f2f2f2;
 }
 
@@ -40,31 +40,43 @@
 }
 
 .word-sum button.copy-button {
-  background-color: var(--copy-button-background);
+  background-color: var(--copy-action);
   color: var(--default-white);
 }
 
 .word-sum button.copy-button:hover {
   background-color: var(--hover-button-background);
-  color: var(--copy-button-background);
+  color: var(--copy-action);
 }
 
 .word-sum button.clear-button {
-  background-color: var(--clear-button-background);
+  background-color: var(--clear-action);
   color: var(--default-white);
 }
 
 .word-sum button.clear-button:hover {
   background-color: var(--hover-button-background);
-  color: var(--clear-button-background);
+  color: var(--clear-action);
 }
 
 .word-sum button.copy-clear-button {
-  background-color: var(--copy-clear-button-background);
+  background-color: var(--copy-clear-action);
   color: var(--default-white);
 }
 
 .word-sum button.copy-clear-button:hover {
   background-color: var(--hover-button-background);
-  color: var(--copy-clear-button-background);
+  color: var(--copy-clear-action);
+}
+
+.word-sum .notification {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  opacity: 1;
+  transition: opacity 0.2s;
 }

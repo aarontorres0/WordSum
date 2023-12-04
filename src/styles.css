@@ -1,4 +1,3 @@
-/* styles.css */
 :root {
   --default-white: #fff;
   --copy-action: #3d85c6;
@@ -8,11 +7,11 @@
 }
 
 .word-sum textarea {
+  width: 100%;
   min-height: 150px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 16px;
   resize: vertical;
   margin-bottom: 10px;
 }
@@ -27,12 +26,10 @@
   margin-top: 10px;
 }
 
-/* Customize button styles */
 .word-sum button {
   border-radius: 8px;
   border: none;
   padding: 0.6em 1.2em;
-  font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   cursor: pointer;
@@ -79,4 +76,44 @@
   border-radius: 5px;
   opacity: 1;
   transition: opacity 0.2s;
+}
+
+.word-sum {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.word-sum p,
+.word-sum button,
+.word-sum textarea {
+  font-size: 1em;
+}
+
+@media screen and (max-width: 600px) {
+  .word-sum textarea {
+    width: 90%;
+    resize: none;
+  }
+
+  .word-sum .button-container {
+    flex-direction: column;
+  }
+
+  .word-sum .button-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .word-sum button {
+    width: 70%;
+    margin-bottom: 10px;
+  }
+
+  .word-sum .notification {
+    width: 90%;
+    font-size: 0.9em;
+  }
 }

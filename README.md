@@ -1,6 +1,8 @@
 # WordSum
 
-WordSum is a simple counting tool designed to provide the word and character count in a given text.
+[![Build and Deploy](https://github.com/aarontorres0/WordSum/actions/workflows/deploy.yml/badge.svg)](https://github.com/aarontorres0/WordSum/actions/workflows/deploy.yml)
+
+[WordSum](https://aarontorres0.github.io/WordSum/) provides the word and character count for a given text.
 
 ## Getting Started
 
